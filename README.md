@@ -10,15 +10,4 @@ moves one cell closer to the new player's location, in whichever direction is th
 vision sensors but they have an accurate odour sensor that allows them to follow the player!
 There is one hope: make the robots hit the maze or each other. If all of them are destroyed, the player wins. 
 
-##Example
 
-********************
-* R R *
-* R * * * *
-* H * *
-* ** * * *
-* * * * *
-* * * R * *
-* * ** *
-* R * *
-********************
