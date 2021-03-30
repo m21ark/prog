@@ -2,6 +2,15 @@
 
 using namespace std;
 
+void stripStr(string &s){
+    //removes blank spaces around string s
+    for(int i=0;i<s.size();i++){
+        if(s[i]==' '){s.erase(i,1);i--;} else break;
+    }
+    for(int i=s.size()-1;i>=0;i--) if(s[i]==' ')s.erase(i,1); else break;
+}
+
+
 string askWinnerName(){
     //asks for a 15 char name and returns it
     //if ctrlZ happens "__BROKEN__LOOP__" is returned
@@ -9,19 +18,15 @@ string askWinnerName(){
         string s= "";
         string s2= "";
         char c = ' ';
-        cout<<endl<<"Please insert your name: \n"<<" > ";getline(cin,s2);
+        cout<<endl<<"Please insert your name: \n"<<" > ";getline(cin,s2);stripStr(s2);
         if(cin.fail() && cin.eof()) return "__BROKEN__LOOP__"; // detects ctrlz
-        
+
         //test if empty name is choosed
         if(s2.size()==0){cout<<"Empty name not allowed!"<<endl;continue;}
         
         //reduce to 15 char if needed
         if (s2.size()<=15){s=s2;}else for(int i=0;i<15;i++) s+=s2[i];
-
-        //test if name is only spaces
-        bool onlySpaces = true;
-        for(char i:s) if(i!= ' ' ) onlySpaces = false;
-        if(onlySpaces){cout<<"Empty name not allowed!"<<endl;continue;}
+        stripStr(s);
         
         //confirms name
         cout<<"Is '"<<s<< "' the name you want? (Y/N)"<<endl<<" > ";
