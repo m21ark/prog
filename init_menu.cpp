@@ -60,7 +60,7 @@ void showRules(){
     cout<<endl;
 }
 
-void calculator()
+void init_menu()
 {
     int opt;
     while (true)
@@ -113,6 +113,6 @@ void calculator()
 }
 
 int main(){
-    calculator();
+    init_menu();
     char a;cout<<"Press key to exit...";cin>>a;
 }
