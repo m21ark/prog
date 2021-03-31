@@ -1,13 +1,24 @@
 #include <iostream>
 #include <iomanip>
+#include <fstream> // needed to work with files
 
 using namespace std;
 
 bool validMapNum(int n){
-    //TODO (Verify if valid map is picked and return true in that case) 
+    if(n==0) return true; // accept 0 as valid to exit to main menu
+    //Verify if valid map is picked and return true in that case
     if (n>99 || n<0) return false;
-    return true;
-} 
+    string num = to_string(n);
+    if(n<10){
+        ifstream file ("MAZE_0"+num+".txt");
+        //cout<<"MAZE_0"+num+".txt"<<endl;
+        return file.good();
+    }    
+    ifstream file ("MAZE_"+num+".txt");
+    //cout<<"MAZE_"+num+".txt"<<endl;
+    return file.good();   
+}
+
 
 int askMapNum(){
     while(true)
