@@ -20,6 +20,11 @@ vector<string> loadMap(string fileName){
     return map;
 }
 
+void showMap(vector<string> map){
+    for(string i:map) cout<<i<<endl;
+    cout<<endl;
+}
+
 int main(){
     vector<string> map = loadMap("MAZE_XX.txt");
     //stores map size to height and lenght vars
@@ -27,5 +32,5 @@ int main(){
     int lenght = map[0].size();
     
     printf("Map size = %d x %d\n\n",height,lenght);
-    for(string i:map) cout<<i<<endl;
+    showMap(map);
 }
