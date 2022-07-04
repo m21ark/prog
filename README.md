@@ -1,13 +1,14 @@
-# C++ Game 
+# The Game
 
-GAME OVERVIEW
-The objective of this practical work is to develop a program to play a robots game.
-The player is placed in a maze made up of high-voltage fences and posts. There are also some interceptor robots that 
-will try to destroy the player. If the player touches the maze or any of these robots, that is the end of the game (and 
-the player!). The robots are also destroyed when they touch the fences/posts or when they collide with each other.
-Every time the player moves in any direction (horizontally, vertically, or diagonally) to a contiguous cell, each robot 
-moves one cell closer to the new player's location, in whichever direction is the shortest path. The robots have no 
-vision sensors but they have an accurate odour sensor that allows them to follow the player!
-There is one hope: make the robots hit the maze or each other. If all of them are destroyed, the player wins. 
+The player is placed in a maze made up of posts. The posts are of two types: electrified and non-electrified. There are also some interceptor robots that will try to destroy the player. If the player touches an electrified post or any of these  robots, that is the end of the game (and the player!). 
 
+The robots are also destroyed when they touch an electrified  post or they collide with each other, and they become stuck when they collide with a non-electrified post.
+
+Every time the player moves in any direction (horizontally, vertically, or diagonally) to a contiguous cell, each robot moves one cell closer to the new player's location, in whichever direction is the shortest path. The robots have no vision sensors but they have an accurate odour sensor that allows them to follow the player!
+
+The maze has one or more exit gates. The objective of the player is to reach one of the exit gates, in the shortest time possible, before being electrocuted (by touching an electrified post) or caught by a robot.
+
+# Group (T07_G07)
+- GUILHERME SOARES SEQUEIRA
+- MARCO ANDRÉ ROCHA PINTO
 
